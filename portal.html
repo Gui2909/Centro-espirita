@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Serviços - N.E.E.E. Emmanuel</title>
+    <meta name="description" content="Portal de serviços online do Núcleo de Estudos Espírita Emmanuel. Reservas de livros, catálogo do Breshopping e agendamentos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="portal-body">
+
+    <div class="portal-container">
+        
+        <aside class="portal-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo-back">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Voltar ao Site</span>
+                </a>
+                <div class="logo mt-3">
+                    <svg width="32" height="32" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)"/>
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)"/>
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2"/>
+                    </svg>
+                    <div class="logo-text">
+                        <span class="logo-ce">PORTAL</span>
+                        <span class="logo-name">Emmanuel</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <button class="nav-tab-btn active" data-tab="dashboard">
+                            <span class="nav-icon">📊</span> Painel Geral
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-tab-btn" data-tab="breshopping" id="breshopping-tab-btn">
+                            <span class="nav-icon">🛍️</span> Breshopping Virtual
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-tab-btn" data-tab="biblioteca" id="biblioteca-tab-btn">
+                            <span class="nav-icon">📚</span> Biblioteca Modesto
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-tab-btn" data-tab="agendamento">
+                            <span class="nav-icon">🗓️</span> Agendamentos & Escala
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>N.E.E.E. Emmanuel</p>
+                <span>Mairiporã - SP</span>
+            </div>
+        </aside>
+        
+        <main class="portal-main">
+            
+            <header class="portal-header">
+                <button class="sidebar-toggle" id="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="portal-user-info">
+                    <span class="welcome-txt">Olá, visitante</span>
+                    <span class="user-status">Acesso Público</span>
+                </div>
+            </header>
+
+            <section class="portal-tab-content active" id="tab-dashboard">
+                <div class="dashboard-welcome">
+                    <h2>Bem-vindo ao Portal de Serviços Emmanuel</h2>
+                    <p>Aqui você pode gerenciar suas interações de forma digital e simulada: reservar livros da nossa biblioteca, simular compras no Breshopping e agendar conversas fraternas ou atividades de voluntariado.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-blue">📚</div>
+                        <div class="stat-info">
+                            <span class="stat-title">Livros no Acervo</span>
+                            <h3 class="stat-value" id="count-books">0</h3>
+                            <span class="stat-desc">Maria Modesto Cravo</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-gold">🛍️</div>
+                        <div class="stat-info">
+                            <span class="stat-title">Itens no Bazar</span>
+                            <h3 class="stat-value" id="count-items">0</h3>
+                            <span class="stat-desc">Breshopping do Emmanuel</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-green">👥</div>
+                        <div class="stat-info">
+                            <span class="stat-title">Voluntários na Escala</span>
+                            <h3 class="stat-value" id="count-volunteers">0</h3>
+                            <span class="stat-desc">Sábados e atividades</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid grid-2 mt-3">
+                    <div class="dash-card">
+                        <h3>Próximas Atividades Públicas</h3>
+                        <div class="divider"></div>
+                        <ul class="activity-timeline">
+                            <li>
+                                <span class="time-day">Seg</span>
+                                <div>
+                                    <h5>Cursos Doutrinários</h5>
+                                    <p>Estudo mediúnico e básico às 19h30</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time-day">Ter</span>
+                                <div>
+                                    <h5>Acolhimento & Palestra</h5>
+                                    <p>Conversas fraternas a partir das 18h30</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="time-day">Qui</span>
+                                <div>
+                                    <h5>Palestras Públicas</h5>
+                                    <p>Palestra e Evangelização Infantil às 19h30</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dash-card">
+                        <h3>Minhas Reservas Ativas</h3>
+                        <div class="divider"></div>
+                        <div id="my-reservations-summary" class="empty-state">
+                            <p>Você não possui reservas pendentes.</p>
+                            <button class="btn btn-primary btn-sm mt-2" onclick="switchTab('biblioteca')">Reservar Livro</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portal-tab-content" id="tab-breshopping">
+                <div class="tab-header">
+                    <h2>Breshopping do Emmanuel</h2>
+                    <p>Catálogo virtual com simulação de vendas e controle de estoque. Selecione as peças, monte sua sacola e feche seu pedido simulado!</p>
+                </div>
+                
+                <div class="breshopping-workspace">
+                    <div class="breshopping-catalog">
+                        <div class="catalog-filters">
+                            <input type="text" id="search-product" placeholder="Buscar produto..." class="form-control">
+                            <select id="filter-category" class="form-control">
+                                <option value="all">Todas as Categorias</option>
+                                <option value="Roupas">Roupas</option>
+                                <option value="Calçados">Calçados</option>
+                                <option value="Acessórios">Acessórios</option>
+                            </select>
+                        </div>
+                        
+                        <div class="products-grid" id="products-grid-container">
+                        </div>
+                    </div>
+                    
+                    <div class="breshopping-cart">
+                        <h3>Sacola de Compras</h3>
+                        <div class="divider"></div>
+                        
+                        <div class="cart-items" id="cart-items-container">
+                            <div class="empty-cart-state">
+                                <p>Sua sacola está vazia.</p>
+                                <span>Selecione produtos no catálogo à esquerda.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="cart-subtotal">R$ 0,00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Desconto Social (10%):</span>
+                                <div class="discount-input-group">
+                                    <input type="checkbox" id="apply-discount">
+                                    <label for="apply-discount">Aplicar Desconto</label>
+                                </div>
+                            </div>
+                            <div class="summary-row total-row">
+                                <span>Total:</span>
+                                <span id="cart-total">R$ 0,00</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" id="btn-checkout">Finalizar Pedido Simulado</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portal-tab-content" id="tab-biblioteca">
+                <div class="tab-header">
+                    <h2>Biblioteca Maria Modesto Cravo</h2>
+                    <p>Consulte e reserve livros espíritas do nosso acervo. Os empréstimos são simulados e armazenados localmente para controle.</p>
+                </div>
+                
+                <div class="biblioteca-workspace">
+                    <div class="biblioteca-search-bar">
+                        <input type="text" id="search-book" placeholder="Buscar por título ou autor..." class="form-control">
+                    </div>
+                    
+                    <div class="books-table-wrapper">
+                        <table class="books-table">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Categoria</th>
+                                    <th>Status</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="books-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portal-tab-content" id="tab-agendamento">
+                <div class="tab-header">
+                    <h2>Agendamento de Acolhimento & Voluntários</h2>
+                    <p>Preencha os formulários abaixo para solicitar agendamento de Conversa Fraterna (Acolhimento) ou candidatar-se na escala de voluntários da casa.</p>
+                </div>
+                
+                <div class="grid-2-large">
+                    <div class="scheduling-forms">
+                        
+                        <div class="form-card">
+                            <h3>Solicitar Conversa Fraterna (Terça-feira)</h3>
+                            <p class="form-desc">O atendimento presencial começa a partir das 18h30. Agende uma conversa com nossos conselheiros.</p>
+                            <form id="form-conversa-fraterna">
+                                <div class="form-group">
+                                    <label for="cf-name">Nome Completo</label>
+                                    <input type="text" id="cf-name" required placeholder="Digite seu nome" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cf-phone">Telefone / WhatsApp</label>
+                                    <input type="tel" id="cf-phone" required placeholder="(11) 99999-9999" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cf-date">Data Desejada (Terça-Feira)</label>
+                                    <input type="date" id="cf-date" required class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-2">Confirmar Agendamento</button>
+                            </form>
+                        </div>
+                        
+                        <div class="form-card mt-3">
+                            <h3>Candidatura a Voluntário</h3>
+                            <p class="form-desc">Junte-se a nós nas ações e projetos do centro. Inscreva-se em um dos setores disponíveis.</p>
+                            <form id="form-voluntariado">
+                                <div class="form-group">
+                                    <label for="v-name">Nome Completo</label>
+                                    <input type="text" id="v-name" required placeholder="Digite seu nome" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="v-role">Área de Interesse</label>
+                                    <select id="v-role" required class="form-control">
+                                        <option value="">Selecione uma área...</option>
+                                        <option value="Projeto Social (Sábados)">Projeto Social (Sábados)</option>
+                                        <option value="Cantina (Quintas)">Cantina (Quintas)</option>
+                                        <option value="Breshopping (Bazar)">Breshopping (Bazar)</option>
+                                        <option value="Biblioteca e Limpeza">Biblioteca e Auxílio Geral</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="v-availability">Disponibilidade</label>
+                                    <input type="text" id="v-availability" required placeholder="Ex: Sábados de manhã, quintas à noite" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-outline-dark mt-2">Candidatar-se</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="scheduling-lists">
+                        <div class="dash-card">
+                            <h3>Conversas Agendadas</h3>
+                            <div class="divider"></div>
+                            <div class="list-wrapper" id="list-conversas">
+                                <p class="empty-list-txt">Nenhuma conversa agendada para hoje.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dash-card mt-3">
+                            <h3>Escala de Voluntários Registrados</h3>
+                            <div class="divider"></div>
+                            <div class="list-wrapper" id="list-voluntarios">
+                                <p class="empty-list-txt">Nenhum voluntário registrado ainda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="modal" id="book-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <h3>Reservar Livro - Biblioteca Modesto</h3>
+            <p id="modal-book-title" class="modal-highlight-title">Título do Livro</p>
+            <p class="modal-desc">Você está reservando este livro de forma simulada. Insira seus dados para gerar a guia de reserva.</p>
+            
+            <form id="form-book-reserve">
+                <input type="hidden" id="modal-book-id">
+                <div class="form-group">
+                    <label for="reserve-name">Nome do Leitor</label>
+                    <input type="text" id="reserve-name" required placeholder="Seu nome" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="reserve-phone">Telefone</label>
+                    <input type="tel" id="reserve-phone" required placeholder="(11) 99999-9999" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary mt-2 w-100">Confirmar Reserva</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="receipt-modal">
+        <div class="modal-content receipt-modal-content">
+            <button class="modal-close" id="receipt-modal-close-btn">&times;</button>
+            <div class="receipt-box" id="receipt-print-area">
+                <div class="receipt-header">
+                    <h4>Breshopping do Emmanuel</h4>
+                    <p>Mairiporã - SP</p>
+                    <p>CUPOM DE VENDA SIMULADA</p>
+                    <div class="receipt-divider">--------------------------------</div>
+                </div>
+                <div class="receipt-body">
+                    <p><strong>Data:</strong> <span id="receipt-date">--/--/----</span></p>
+                    <p><strong>Código:</strong> <span id="receipt-id">#0000</span></p>
+                    <div class="receipt-divider">--------------------------------</div>
+                    <div class="receipt-items-list" id="receipt-items-list">
+                    </div>
+                    <div class="receipt-divider">--------------------------------</div>
+                    <div class="receipt-totals">
+                        <p>Subtotal: <span id="receipt-subtotal">R$ 0,00</span></p>
+                        <p>Desconto: <span id="receipt-discount">R$ 0,00</span></p>
+                        <p class="receipt-total-large">TOTAL: <span id="receipt-total">R$ 0,00</span></p>
+                    </div>
+                </div>
+                <div class="receipt-footer">
+                    <div class="receipt-divider">--------------------------------</div>
+                    <p>Obrigado por apoiar a nossa causa!</p>
+                    <p>Esta é uma simulação de vendas.</p>
+                </div>
+            </div>
+            <button class="btn btn-primary mt-3 w-100" onclick="printReceipt()">Imprimir Recibo (Simulado)</button>
+        </div>
+    </div>
+
+    <script src="portal.js"></script>
+</body>
+</html>
