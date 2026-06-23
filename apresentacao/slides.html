@@ -938,6 +938,15 @@
 
             // Inicializar barras de progresso
             updateSlideState();
+
+            // Verificar se o arquivo está rodando avulso (fora da estrutura do projeto)
+            // Se sim, oculta o botão de "Voltar ao Site"
+            const probeImg = new Image();
+            probeImg.onerror = () => {
+                const backBtn = document.querySelector('.nav-home-btn');
+                if (backBtn) backBtn.style.display = 'none';
+            };
+            probeImg.src = "../images/logo.jpeg";
         });
     </script>
 </body>
