@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -506,6 +506,31 @@
             padding: 16px 20px;
         }
 
+        .code-container {
+            margin: 0;
+            overflow-x: auto;
+            max-height: 250px;
+            text-align: left;
+        }
+
+        .code-snippet {
+            font-family: 'Consolas', 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 0.72rem;
+            color: #ABB2BF;
+            line-height: 1.45;
+            white-space: pre;
+            display: block;
+        }
+        
+        .kw { color: #C678DD; font-weight: bold; } /* keyword */
+        .fn { color: #61AFEF; } /* function */
+        .str { color: #98C379; } /* string */
+        .cmt { color: #5C6370; font-style: italic; } /* comment */
+        .num { color: #D19A66; } /* number */
+        .op { color: #56B6C2; } /* operator */
+        .typ { color: #E5C07B; } /* type/class */
+        .var { color: #E06C75; } /* variable/property */
+
         @media (max-width: 768px) {
             body {
                 overflow-y: auto;
@@ -591,8 +616,7 @@
             </div>
             <h1>Apresentação do <span>Projeto</span></h1>
             <h3>Portal de Serviços Integrados</h3>
-            <p>Conheça as tecnologias utilizadas, a lógica por trás da aplicação e a forma como o sistema foi desenhado
-                para modernizar as atividades do Centro.</p>
+            <p>Conheça as tecnologias, regras de negócio e a implementação técnica desenvolvida para modernizar as atividades do Centro Espírita.</p>
             <div class="progress-container">
                 <div class="progress-bar"></div>
             </div>
@@ -602,39 +626,32 @@
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
-                            fill="var(--primary-color)" />
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
                         <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
-                            stroke-width="2" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
-                <span class="slide-tag">01 / Conceito</span>
+                <span class="slide-tag">01 / O Centro Espírita</span>
             </div>
             <div class="slide-body">
                 <div class="slide-grid-2">
                     <div>
-                        <h2>A Proposta do <span>Projeto</span></h2>
-                        <p>O Núcleo de Estudos Espírita Emmanuel atua desde 1969 prestando auxílio e amparo. Este
-                            projeto propõe a <strong>modernização e facilitação</strong> do acesso da comunidade aos
-                            serviços do centro.</p>
+                        <h2>O que é o <span>N.E.E.E. Emmanuel</span>?</h2>
+                        <p>Fundado em <strong>1969</strong> em Mairiporã - SP, o Núcleo de Estudos Espíritas Emmanuel é uma instituição filantrópica que promove o estudo e a prática da doutrina espírita, além de prestar relevante apoio social à comunidade local.</p>
                         <ul class="slide-list">
-                            <li><strong>Site Institucional:</strong> Divulgação histórica, palestras públicas e ações
-                                sociais presenciais.</li>
-                            <li><strong>Portal Interativo:</strong> Gestão e simulação de serviços em formato digital,
-                                eliminando processos lentos em papel.</li>
-                            <li><strong>Inclusão e Comunidade:</strong> Conexão mais ágil para voluntários, leitores e
-                                participantes do bazar de caridade.</li>
+                            <li><strong>Estudo Doutrinário:</strong> Cursos sistemáticos e palestras públicas regulares.</li>
+                            <li><strong>Bazar Solidário:</strong> Captação de recursos via brechó interno ("Breshopping").</li>
+                            <li><strong>Biblioteca:</strong> Difusão de livros espíritas clássicos e contemporâneos.</li>
+                            <li><strong>Conversa Fraterna:</strong> Atendimento espiritual e acolhimento emocional.</li>
                         </ul>
                     </div>
-                    <div style="text-align: center; font-size: 8rem; opacity: 0.12; user-select: none;">🎯</div>
+                    <div style="text-align: center; font-size: 7.5rem; opacity: 0.12; user-select: none;">🏡</div>
                 </div>
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 2 de 6</span>
+                <span>Slide 2 de 12</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -645,56 +662,31 @@
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
-                            fill="var(--primary-color)" />
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
                         <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
-                            stroke-width="2" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
-                <span class="slide-tag">02 / Tecnologias</span>
+                <span class="slide-tag">02 / O Desafio</span>
             </div>
             <div class="slide-body">
-                <h2>Stack Tecnológica <span>Utilizada</span></h2>
-                <p style="margin-bottom: 15px;">O ecossistema do site foi projetado para rodar inteiramente no lado do
-                    cliente (Client-Side), garantindo alta velocidade e custo zero de infraestrutura de servidor.</p>
-                <div class="slide-grid-3">
-                    <div class="slide-card">
-                        <div>
-                            <div class="card-icon">📁</div>
-                            <h4>HTML5 Semântico</h4>
-                            <p>Utilização correta da hierarquia de cabeçalhos e tags semânticas para melhor indexação de
-                                SEO e leitura de tela.</p>
-                        </div>
-                        <div class="tech-badges"><span class="tech-badge">Acessibilidade</span></div>
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Modernização <span>Sem Servidor</span></h2>
+                        <p>O desafio consistiu em desenhar e implementar um sistema interativo para gerir os serviços de assistência, empréstimos e vendas com restrições severas de infraestrutura.</p>
+                        <ul class="slide-list">
+                            <li><strong>Custo Zero de Hospedagem:</strong> Operação inteiramente estática (Client-Side).</li>
+                            <li><strong>Segurança por Isolamento:</strong> Informações críticas dos leitores e agendamentos mantidas apenas localmente.</li>
+                            <li><strong>Simulação de Alta Fidelidade:</strong> Operação reativa contendo controles e validações realistas de um banco de dados dinâmico.</li>
+                        </ul>
                     </div>
-                    <div class="slide-card">
-                        <div>
-                            <div class="card-icon">🎨</div>
-                            <h4>CSS3 Moderno</h4>
-                            <p>Variáveis CSS para temas, Grid e Flexbox para responsividade, efeitos de Glassmorphism e
-                                estilização `@media print` para o cupom do bazar.</p>
-                        </div>
-                        <div class="tech-badges"><span class="tech-badge">CSS Grid</span><span class="tech-badge">Print
-                                Layout</span></div>
-                    </div>
-                    <div class="slide-card">
-                        <div>
-                            <div class="card-icon">⚡</div>
-                            <h4>Vanilla JS & Storage</h4>
-                            <p>JavaScript puro sem frameworks adicionais. Controle de estado complexo persistido
-                                localmente via Web Storage API (localStorage).</p>
-                        </div>
-                        <div class="tech-badges"><span class="tech-badge">ES6+ JavaScript</span><span
-                                class="tech-badge">localStorage</span></div>
-                    </div>
+                    <div style="text-align: center; font-size: 7.5rem; opacity: 0.12; user-select: none;">🎯</div>
                 </div>
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 3 de 6</span>
+                <span>Slide 3 de 12</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -705,51 +697,44 @@
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
-                            fill="var(--primary-color)" />
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
                         <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
-                            stroke-width="2" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
-                <span class="slide-tag">03 / Comportamento</span>
+                <span class="slide-tag">03 / Portal de Serviços</span>
             </div>
             <div class="slide-body">
-                <h2>O que o <span>JavaScript</span> faz?</h2>
-                <p style="margin-bottom: 15px;">A lógica de controle programada no arquivo <code>portal.js</code>
-                    gerencia toda a interatividade de forma dinâmica:</p>
+                <h2>Módulos do <span>Sistema</span></h2>
+                <p style="margin-bottom: 12px;">A interface unifica os processos da instituição em quatro grandes pilares funcionais:</p>
                 <div class="slide-grid-3">
+                    <div class="slide-card">
+                        <div>
+                            <div class="card-icon">📊</div>
+                            <h4>Painel Geral</h4>
+                            <p>Dashboard central com contadores dinâmicos de livros, itens em estoque e voluntários ativos.</p>
+                        </div>
+                    </div>
                     <div class="slide-card">
                         <div>
                             <div class="card-icon">🛍️</div>
-                            <h4>Bazar Interativo</h4>
-                            <p>Filtros, carrinho de compras com controle reativo de estoque físico, soma de valores com
-                                cálculo de desconto social e emissão de comprovante fiscal.</p>
+                            <h4>Breshopping</h4>
+                            <p>Catálogo reativo para gerenciar vendas, carrinho de compras, cálculo de desconto social e recibos.</p>
                         </div>
                     </div>
                     <div class="slide-card">
                         <div>
                             <div class="card-icon">📚</div>
-                            <h4>Reserva de Acervo</h4>
-                            <p>Tabela de livros com busca em tempo real, fluxo de reserva via janela modal e
-                                sincronização com indicadores do dashboard.</p>
-                        </div>
-                    </div>
-                    <div class="slide-card">
-                        <div>
-                            <div class="card-icon">🗓️</div>
-                            <h4>Validações & Listas</h4>
-                            <p>Controle de agendamentos de Acolhimento Fraterno bloqueando dias inválidos (fora de
-                                terças-feiras e passados) e escala flexível de voluntariado.</p>
+                            <h4>Biblioteca Modesto</h4>
+                            <p>Controle do acervo de livros espíritas com busca instantânea e formulário modal de reserva.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 4 de 6</span>
+                <span>Slide 4 de 12</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -760,31 +745,58 @@
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
-                            fill="var(--primary-color)" />
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
                         <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
-                            stroke-width="2" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
-                <span class="slide-tag">04 / Desenvolvimento</span>
+                <span class="slide-tag">04 / Breshopping</span>
             </div>
             <div class="slide-body">
                 <div class="slide-grid-2">
                     <div>
-                        <h2>Como foi Feito? <span>Arquitetura</span></h2>
-                        <p>O desenvolvimento focou em proporcionar uma interface leve, segura e esteticamente premium,
-                            dividida em módulos claros:</p>
+                        <h2>Breshopping <span>Beneficente</span></h2>
+                        <p>O bazar capta fundos para assistência social. A versão digital simula e gerencia o fluxo de controle de produtos.</p>
                         <ul class="slide-list">
-                            <li><strong>Separação de Preocupações:</strong> HTML estrutural, folha de estilos limpa e
-                                modular de layout, e JavaScript isolado em escopo fechado (IIFE).</li>
-                            <li><strong>Identidade Coesa:</strong> Paleta HSL focando em harmonia (azul sereno para paz
-                                espiritual e dourado para acolhimento) com fontes refinadas (Lora + Inter).</li>
-                            <li><strong>Persistência Sem Backend:</strong> Simulação completa de banco de dados por
-                                chave-valor do localStorage, permitindo demonstrações idênticas a um ambiente real de
-                                produção.</li>
+                            <li><strong>Estoque Reativo:</strong> O estoque físico do catálogo diminui de forma reativa a cada compra finalizada.</li>
+                            <li><strong>Desconto Social:</strong> Aplicação opcional e imediata de 10% de dedução no total da compra para famílias cadastradas.</li>
+                            <li><strong>Cupom de Venda:</strong> Emissão de nota fiscal simulada contendo código de venda e itens adquiridos.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center; font-size: 7.5rem; opacity: 0.12; user-select: none;">🛍️</div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 5 de 12</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">05 / Implementação</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Lógica de <span>Checkout</span></h2>
+                        <p>Redução dinâmica do estoque após validação da sacola. O cálculo consolida descontos de forma reativa no ato do encerramento.</p>
+                        <ul class="slide-list" style="font-size: 0.85rem;">
+                            <li>Atualiza o array de estoque global em memória.</li>
+                            <li>Aplica desconto e formata o comprovante.</li>
+                            <li>Invoca a atualização visual e persiste os dados.</li>
                         </ul>
                     </div>
                     <div class="terminal-window">
@@ -792,25 +804,30 @@
                             <div class="terminal-dot dot-red"></div>
                             <div class="terminal-dot dot-yellow"></div>
                             <div class="terminal-dot dot-green"></div>
-                            <span class="terminal-title">estrutura-projeto</span>
+                            <span class="terminal-title">portal.js &gt; checkout()</span>
                         </div>
-                        <div class="terminal-body">
-                            <code
-                                style="display: block; font-family: monospace; font-size: 0.85rem; line-height: 1.6; color: var(--text-gray);">
-├── index.html (Site Principal)<br>
-├── style.css (Estilos Globais)<br>
-├── portal.html (Portal de Painéis)<br>
-├── portal.css (Layout do Painel)<br>
-├── portal.js (Lógica & Estados)<br>
-└── images/ (Banco de Imagens)
-                            </code>
+                        <div class="terminal-body code-container">
+                            <pre class="code-snippet"><code><span class="kw">function</span> <span class="fn">checkout</span>() {
+    <span class="kw">if</span> (<span class="var">cart</span>.<span class="var">length</span> === <span class="num">0</span>) <span class="kw">return</span>;
+    <span class="var">cart</span>.<span class="fn">forEach</span>(<span class="var">item</span> <span class="op">=&gt;</span> {
+        <span class="kw">const</span> <span class="var">idx</span> = <span class="var">products</span>.<span class="fn">findIndex</span>(<span class="var">p</span> <span class="op">=&gt;</span> <span class="var">p</span>.<span class="var">id</span> === <span class="var">item</span>.<span class="var">id</span>);
+        <span class="kw">if</span> (<span class="var">idx</span> !== -<span class="num">1</span>) {
+            <span class="var">products</span>[<span class="var">idx</span>].<span class="var">stock</span> -= <span class="var">item</span>.<span class="var">qty</span>;
+        }
+    });
+    <span class="kw">const</span> <span class="var">subtotal</span> = <span class="var">cart</span>.<span class="fn">reduce</span>((<span class="var">a</span>,<span class="var">i</span>)<span class="op">=&gt;</span><span class="var">a</span>+(<span class="var">i</span>.<span class="var">price</span>*<span class="var">i</span>.<span class="var">qty</span>), <span class="num">0</span>);
+    <span class="kw">const</span> <span class="var">disc</span> = <span class="var">applyDiscountCb</span>.<span class="var">checked</span> ? <span class="var">subtotal</span> * <span class="num">0.1</span> : <span class="num">0</span>;
+    <span class="fn">showReceipt</span>(<span class="var">subtotal</span>, <span class="var">disc</span>, <span class="var">subtotal</span> - <span class="var">disc</span>);
+    <span class="var">cart</span> = [];
+    <span class="fn">saveState</span>();
+}</code></pre>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 5 de 6</span>
+                <span>Slide 6 de 12</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -821,45 +838,294 @@
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
-                            fill="var(--primary-color)" />
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
                         <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
-                            stroke-width="2" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
-                <span class="slide-tag">05 / Resultados</span>
+                <span class="slide-tag">06 / Biblioteca</span>
             </div>
-            <div class="slide-body" style="text-align: center; align-items: center;">
-                <h2>Principais <span>Benefícios</span> do Modelo</h2>
-                <p style="margin: 0 auto 25px auto; max-width: 750px;">O desenvolvimento alcançou uma plataforma
-                    estática de alta fidelidade e utilidade imediata.</p>
-                <div class="slide-grid-3" style="width: 100%;">
-                    <div class="slide-card" style="text-align: center; align-items: center;">
-                        <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 5px;">🚀</div>
-                        <h4>Velocidade Máxima</h4>
-                        <p>Carregamento instantâneo por não depender de chamadas e APIs externas lentas.</p>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Biblioteca <span>Modesto Cravo</span></h2>
+                        <p>O acervo abriga obras fundamentais e romances instrutivos para empréstimo. O portal simula a triagem e o controle de reservas.</p>
+                        <ul class="slide-list">
+                            <li><strong>Busca Inteligente:</strong> Filtros textuais em tempo real cruzando títulos e autores no catálogo.</li>
+                            <li><strong>Modais de Reserva:</strong> Popup para captura de dados do leitor (Nome e Telefone) sem recarregar a página.</li>
+                            <li><strong>Mudança de Estado:</strong> Bloqueio automático de obras sob reserva ('Disponível' para 'Reservado').</li>
+                        </ul>
                     </div>
-                    <div class="slide-card" style="text-align: center; align-items: center;">
-                        <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 5px;">🛡️</div>
-                        <h4>Segurança & Privacidade</h4>
-                        <p>Os dados residem estritamente no dispositivo do usuário, eliminando riscos de vazamento.</p>
-                    </div>
-                    <div class="slide-card" style="text-align: center; align-items: center;">
-                        <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 5px;">💰</div>
-                        <h4>Hospedagem Econômica</h4>
-                        <p>Pode ser hospedado de forma totalmente gratuita em servidores de arquivos estáticos.</p>
-                    </div>
+                    <div style="text-align: center; font-size: 7.5rem; opacity: 0.12; user-select: none;">📚</div>
                 </div>
-                <h4 style="margin-top: 25px; font-size: 1.2rem; color: #FFFFFF; font-family: var(--font-title);">
-                    Obrigado!
-                </h4>
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 6 de 6</span>
+                <span>Slide 7 de 12</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">07 / Implementação</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Fluxo de <span>Reserva</span></h2>
+                        <p>O envio do formulário altera reativamente o status do livro físico e registra a intenção de retirada, atualizando a fila do dashboard do leitor.</p>
+                        <ul class="slide-list" style="font-size: 0.85rem;">
+                            <li>Previne o recarregamento com `e.preventDefault()`.</li>
+                            <li>Gera um ID único usando timestamp (`Date.now()`).</li>
+                            <li>Realiza renderização subsequente de atualização.</li>
+                        </ul>
+                    </div>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                            <span class="terminal-title">portal.js &gt; submitReserve</span>
+                        </div>
+                        <div class="terminal-body code-container">
+                            <pre class="code-snippet"><code><span class="var">formBookReserve</span>.<span class="fn">addEventListener</span>(<span class="str">"submit"</span>, <span class="kw">function</span>(<span class="var">e</span>) {
+    <span class="var">e</span>.<span class="fn">preventDefault</span>();
+    <span class="kw">const</span> <span class="var">bookId</span> = <span class="fn">parseInt</span>(<span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"modal-book-id"</span>).<span class="var">value</span>);
+    <span class="kw">const</span> <span class="var">name</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"reserve-name"</span>).<span class="var">value</span>;
+    <span class="kw">const</span> <span class="var">idx</span> = <span class="var">books</span>.<span class="fn">findIndex</span>(<span class="var">b</span> <span class="op">=&gt;</span> <span class="var">b</span>.<span class="var">id</span> === <span class="var">bookId</span>);
+    
+    <span class="kw">if</span> (<span class="var">idx</span> !== -<span class="num">1</span> <span class="op">&amp;&amp;</span> <span class="var">books</span>[<span class="var">idx</span>].<span class="var">status</span> === <span class="str">"Disponível"</span>) {
+        <span class="var">books</span>[<span class="var">idx</span>].<span class="var">status</span> = <span class="str">"Reservado"</span>;
+        <span class="var">reservas</span>.<span class="fn">push</span>({ id: <span class="typ">Date</span>.<span class="fn">now</span>(), <span class="var">bookId</span>, readerName: <span class="var">name</span> });
+        <span class="fn">saveState</span>();
+        <span class="fn">renderBooks</span>();
+        <span class="fn">closeReserveModal</span>();
+    }
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 8 de 12</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">08 / Agendamentos</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Acolhimento <span>Fraterno</span></h2>
+                        <p>O Acolhimento Fraterno é uma conversa individual e privativa de amparo. O portal simula a solicitação respeitando as regras físicas de calendário.</p>
+                        <ul class="slide-list">
+                            <li><strong>Regra do Dia Fixo:</strong> Os atendimentos no centro físico ocorrem estritamente às terças-feiras. O formulário rejeita outros dias.</li>
+                            <li><strong>Validação Temporal:</strong> Bloqueio de agendamento retroativo (datas no passado).</li>
+                            <li><strong>Gestão de Escalas:</strong> Centralização de voluntários e atribuição rápida de tarefas de apoio.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: center; font-size: 7.5rem; opacity: 0.12; user-select: none;">🗓️</div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 9 de 12</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">09 / Implementação</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Validação <span>Temporal</span></h2>
+                        <p>O processamento do formulário de agendamento bloqueia datas inválidas por meio de operações sobre objetos `Date` nativos do JavaScript.</p>
+                        <ul class="slide-list" style="font-size: 0.85rem;">
+                            <li>Compara o timestamp selecionado com o início do dia de hoje.</li>
+                            <li>Usa `getDay() !== 2` para rejeitar datas fora de terças-feiras.</li>
+                        </ul>
+                    </div>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                            <span class="terminal-title">portal.js &gt; dateValidation</span>
+                        </div>
+                        <div class="terminal-body code-container">
+                            <pre class="code-snippet"><code><span class="kw">const</span> <span class="var">parts</span> = <span class="var">dateVal</span>.<span class="fn">split</span>(<span class="str">"-"</span>);
+<span class="kw">const</span> <span class="var">selectedDate</span> = <span class="kw">new</span> <span class="typ">Date</span>(
+    <span class="fn">parseInt</span>(<span class="var">parts</span>[<span class="num">0</span>]), 
+    <span class="fn">parseInt</span>(<span class="var">parts</span>[<span class="num">1</span>]) - <span class="num">1</span>, 
+    <span class="fn">parseInt</span>(<span class="var">parts</span>[<span class="num">2</span>])
+);
+<span class="kw">const</span> <span class="var">today</span> = <span class="kw">new</span> <span class="typ">Date</span>();
+<span class="var">today</span>.<span class="fn">setHours</span>(<span class="num">0</span>,<span class="num">0</span>,<span class="num">0</span>,<span class="num">0</span>);
+
+<span class="kw">if</span> (<span class="var">selectedDate</span> <span class="op">&lt;</span> <span class="var">today</span>) {
+    <span class="fn">alert</span>(<span class="str">"Selecione uma data futura."</span>); <span class="kw">return</span>;
+}
+<span class="kw">if</span> (<span class="var">selectedDate</span>.<span class="fn">getDay</span>() !== <span class="num">2</span>) {
+    <span class="fn">alert</span>(<span class="str">"O acolhimento ocorre apenas às terças-feiras."</span>); <span class="kw">return</span>;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 10 de 12</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">10 / Persistência</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Banco de Dados <span>Local</span></h2>
+                        <p>Simulação robusta de persistência. A manipulação de arrays é sincronizada com o armazenamento persistente do navegador, evitando perda de estado.</p>
+                        <ul class="slide-list" style="font-size: 0.85rem;">
+                            <li>Uso do `localStorage` da Web Storage API.</li>
+                            <li>Serialização e desserialização rápida via objetos JSON.</li>
+                            <li>Isolamento de escopo por meio de IIFE auto-executável.</li>
+                        </ul>
+                    </div>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                            <span class="terminal-title">portal.js &gt; localStorage</span>
+                        </div>
+                        <div class="terminal-body code-container">
+                            <pre class="code-snippet"><code><span class="cmt">// Estado inicializado a partir do localStorage</span>
+<span class="kw">let</span> <span class="var">books</span> = <span class="typ">JSON</span>.<span class="fn">parse</span>(
+    <span class="var">localStorage</span>.<span class="fn">getItem</span>(<span class="str">"neee_books"</span>)
+) <span class="op">||</span> <span class="var">defaultBooks</span>;
+
+<span class="kw">function</span> <span class="fn">saveState</span>() {
+    <span class="var">localStorage</span>.<span class="fn">setItem</span>(<span class="str">"neee_books"</span>, <span class="typ">JSON</span>.<span class="fn">stringify</span>(<span class="var">books</span>));
+    <span class="var">localStorage</span>.<span class="fn">setItem</span>(<span class="str">"neee_products"</span>, <span class="typ">JSON</span>.<span class="fn">stringify</span>(<span class="var">products</span>));
+    <span class="var">localStorage</span>.<span class="fn">setItem</span>(<span class="str">"neee_reservas"</span>, <span class="typ">JSON</span>.<span class="fn">stringify</span>(<span class="var">reservas</span>));
+    <span class="fn">updateStats</span>();
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 11 de 12</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">11 / Interfaces</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Impressão & <span>Responsividade</span></h2>
+                        <p>O Portal é 100% responsivo para celulares e computadores. Para o bazar de caridade, uma folha de estilo de impressão isola o cupom fiscal físico.</p>
+                        <ul class="slide-list" style="font-size: 0.85rem;">
+                            <li>Injeta CSS temporário de impressão via DOM.</li>
+                            <li>Esconde elementos da tela e exibe a guia com formatação de bobina térmica.</li>
+                            <li>Dispara `window.print()` e remove a folha temporária.</li>
+                        </ul>
+                    </div>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                            <span class="terminal-title">portal.js &gt; printReceipt()</span>
+                        </div>
+                        <div class="terminal-body code-container">
+                            <pre class="code-snippet"><code><span class="var">window</span>.<span class="fn">printReceipt</span> = <span class="kw">function</span>() {
+    <span class="kw">const</span> <span class="var">html</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"receipt-print-area"</span>).<span class="var">innerHTML</span>;
+    <span class="kw">const</span> <span class="var">style</span> = <span class="var">document</span>.<span class="fn">createElement</span>(<span class="str">"style"</span>);
+    <span class="var">style</span>.<span class="var">innerHTML</span> = `
+        <span class="str">@media print {
+            body * { visibility: hidden; }
+            #print-sect, #print-sect * { visibility: visible; }
+            #print-sect { position: absolute; left:0; top:0; width:100%; }
+        }</span>
+    `;
+    <span class="var">document</span>.<span class="var">head</span>.<span class="fn">appendChild</span>(<span class="var">style</span>);
+    <span class="var">window</span>.<span class="fn">print</span>();
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 12 de 12</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
