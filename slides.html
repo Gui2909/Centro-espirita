@@ -651,7 +651,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 2 de 12</span>
+                <span>Slide 2 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -686,7 +686,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 3 de 12</span>
+                <span>Slide 3 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -734,7 +734,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 4 de 12</span>
+                <span>Slide 4 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -769,7 +769,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 5 de 12</span>
+                <span>Slide 5 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -827,7 +827,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 6 de 12</span>
+                <span>Slide 6 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -862,7 +862,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 7 de 12</span>
+                <span>Slide 7 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -906,7 +906,7 @@
     <span class="kw">const</span> <span class="var">name</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"reserve-name"</span>).<span class="var">value</span>;
     <span class="kw">const</span> <span class="var">idx</span> = <span class="var">books</span>.<span class="fn">findIndex</span>(<span class="var">b</span> <span class="op">=&gt;</span> <span class="var">b</span>.<span class="var">id</span> === <span class="var">bookId</span>);
     
-    <span class="kw">if</span> (<span class="var">idx</span> !== -<span class="num">1</span> <span class="op">&amp;&amp;</span> <span class="var">books</span>[<span class="var">idx</span>].<span class="var">status</span> === <span class="str">"Disponível"</span>) {
+    if (<span class="var">idx</span> !== -<span class="num">1</span> <span class="op">&amp;&amp;</span> <span class="var">books</span>[<span class="var">idx</span>].<span class="var">status</span> === <span class="str">"Disponível"</span>) {
         <span class="var">books</span>[<span class="var">idx</span>].<span class="var">status</span> = <span class="str">"Reservado"</span>;
         <span class="var">reservas</span>.<span class="fn">push</span>({ id: <span class="typ">Date</span>.<span class="fn">now</span>(), <span class="var">bookId</span>, readerName: <span class="var">name</span> });
         <span class="fn">saveState</span>();
@@ -920,7 +920,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 8 de 12</span>
+                <span>Slide 8 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -955,7 +955,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 9 de 12</span>
+                <span>Slide 9 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -1013,7 +1013,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 10 de 12</span>
+                <span>Slide 10 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -1030,7 +1030,121 @@
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
-                <span class="slide-tag">10 / Persistência</span>
+                <span class="slide-tag">10 / Voluntariado</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Candidatura a <span>Voluntário</span></h2>
+                        <p>O apoio às ações sociais depende de voluntários. A escala é gerida de forma reativa a partir de formulários de intenção segmentados.</p>
+                        <ul class="slide-list" style="font-size: 0.85rem;">
+                            <li>Registro com prevenção de refresh nativo.</li>
+                            <li>Definição reativa de áreas (Bazar, Cantina, Biblioteca).</li>
+                            <li>Lista dinâmica com opção de exclusão imediata.</li>
+                        </ul>
+                    </div>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                            <span class="terminal-title">portal.js &gt; voluntariado</span>
+                        </div>
+                        <div class="terminal-body code-container">
+                            <pre class="code-snippet"><code><span class="var">formVoluntariado</span>.<span class="fn">addEventListener</span>(<span class="str">"submit"</span>, <span class="kw">function</span>(<span class="var">e</span>) {
+    <span class="var">e</span>.<span class="fn">preventDefault</span>();
+    <span class="kw">const</span> <span class="var">name</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"v-name"</span>).<span class="var">value</span>;
+    <span class="kw">const</span> <span class="var">role</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"v-role"</span>).<span class="var">value</span>;
+    <span class="var">voluntarios</span>.<span class="fn">push</span>({
+        id: <span class="typ">Date</span>.<span class="fn">now</span>(),
+        name: <span class="var">name</span>,
+        role: <span class="var">role</span>
+    });
+    <span class="fn">saveState</span>();
+    <span class="var">formVoluntariado</span>.<span class="fn">reset</span>();
+    <span class="fn">renderVoluntarios</span>();
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 11 de 15</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">11 / Indicadores</span>
+            </div>
+            <div class="slide-body">
+                <div class="slide-grid-2">
+                    <div>
+                        <h2>Painel Geral de <span>Controle</span></h2>
+                        <p>O painel inicial consolida os indicadores dos serviços integrados, gerando contadores dinâmicos a partir do estado atual da aplicação.</p>
+                        <ul class="slide-list" style="font-size: 0.85rem;">
+                            <li>Sincronização dinâmica após qualquer salvamento.</li>
+                            <li>Uso do método `reduce` para acumular a quantidade de estoque.</li>
+                            <li>Atualização reativa dos elementos HTML do DOM.</li>
+                        </ul>
+                    </div>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                            <span class="terminal-title">portal.js &gt; updateStats()</span>
+                        </div>
+                        <div class="terminal-body code-container">
+                            <pre class="code-snippet"><code><span class="kw">function</span> <span class="fn">updateStats</span>() {
+    <span class="kw">const</span> <span class="var">bkEl</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"count-books"</span>);
+    <span class="kw">const</span> <span class="var">itEl</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"count-items"</span>);
+    <span class="kw">const</span> <span class="var">vEl</span> = <span class="var">document</span>.<span class="fn">getElementById</span>(<span class="str">"count-volunteers"</span>);
+
+    <span class="kw">if</span> (<span class="var">bkEl</span>) <span class="var">bkEl</span>.<span class="var">textContent</span> = <span class="var">books</span>.<span class="var">length</span>;
+    <span class="kw">if</span> (<span class="var">itEl</span>) {
+        <span class="var">itEl</span>.<span class="var">textContent</span> = <span class="var">products</span>.<span class="fn">reduce</span>(
+            (<span class="var">acc</span>, <span class="var">p</span>) <span class="op">=&gt;</span> <span class="var">acc</span> + <span class="var">p</span>.<span class="var">stock</span>, <span class="num">0</span>
+        );
+    }
+    <span class="kw">if</span> (<span class="var">vEl</span>) <span class="var">vEl</span>.<span class="var">textContent</span> = <span class="var">voluntarios</span>.<span class="var">length</span>;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 12 de 15</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">12 / Persistência</span>
             </div>
             <div class="slide-body">
                 <div class="slide-grid-2">
@@ -1068,7 +1182,7 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 11 de 12</span>
+                <span>Slide 13 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -1085,7 +1199,7 @@
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
-                <span class="slide-tag">11 / Interfaces</span>
+                <span class="slide-tag">13 / Interfaces</span>
             </div>
             <div class="slide-body">
                 <div class="slide-grid-2">
@@ -1125,7 +1239,52 @@
             </div>
             <div class="slide-footer">
                 <span>Projeto Portal de Serviços NEEE</span>
-                <span>Slide 12 de 12</span>
+                <span>Slide 14 de 15</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
+                    </svg>
+                    <span class="logo-text">PORTAL <span>Emmanuel</span></span>
+                </div>
+                <span class="slide-tag">14 / Roadmap</span>
+            </div>
+            <div class="slide-body" style="text-align: center; align-items: center;">
+                <h2>Próximos Passos & <span>Evolução</span></h2>
+                <p style="margin: 0 auto 20px auto; max-width: 750px;">O portal estático valida com excelência as dinâmicas de atendimento e bazares. A evolução futura prevê as seguintes metas:</p>
+                <div class="slide-grid-3" style="width: 100%;">
+                    <div class="slide-card" style="text-align: center; align-items: center;">
+                        <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 5px;">🔑</div>
+                        <h4>Autenticação de Usuários</h4>
+                        <p>Controle de perfis distintos para leitores comuns, administradores de estoque e conselheiros de acolhimento.</p>
+                    </div>
+                    <div class="slide-card" style="text-align: center; align-items: center;">
+                        <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 5px;">☁️</div>
+                        <h4>Integração Cloud</h4>
+                        <p>Substituição do localStorage por um banco de dados real em nuvem (ex: Firebase ou Node/MongoDB) para sincronia coletiva.</p>
+                    </div>
+                    <div class="slide-card" style="text-align: center; align-items: center;">
+                        <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 5px;">💳</div>
+                        <h4>Gateway de Pagamentos</h4>
+                        <p>Integração de PIX ou cartão de crédito para a venda real de produtos do Breshopping.</p>
+                    </div>
+                </div>
+                <h4 style="margin-top: 20px; font-size: 1.2rem; color: #FFFFFF; font-family: var(--font-title);">
+                    Obrigado!
+                </h4>
+            </div>
+            <div class="slide-footer">
+                <span>Projeto Portal de Serviços NEEE</span>
+                <span>Slide 15 de 15</span>
             </div>
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -1133,8 +1292,7 @@
         </div>
 
     </div>
-
-    <div class="controls">
+<div class="controls">
         <button class="btn-nav" id="btn-prev" disabled aria-label="Slide anterior">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
