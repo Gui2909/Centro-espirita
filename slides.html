@@ -1,12 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação do Projeto - N.E.E.E. Emmanuel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-color: #4A7BB0;
@@ -44,7 +47,6 @@
             position: relative;
         }
 
-        /* Glowing background elements */
         .glowing-bg {
             position: absolute;
             top: 0;
@@ -85,15 +87,16 @@
             0% {
                 transform: translate(0, 0) scale(1);
             }
+
             50% {
                 transform: translate(60px, 40px) scale(1.15);
             }
+
             100% {
                 transform: translate(-40px, -60px) scale(0.9);
             }
         }
 
-        /* Container de Slides */
         .presentation-container {
             position: relative;
             width: 90vw;
@@ -104,7 +107,6 @@
             z-index: 10;
         }
 
-        /* Estilo dos Slides */
         .slide {
             position: absolute;
             top: 0;
@@ -125,21 +127,18 @@
             border: 1px solid rgba(255, 255, 255, 0.04);
         }
 
-        /* Slide Ativo */
         .slide.active {
             opacity: 1;
             visibility: visible;
             transform: translateZ(0) scale(1);
         }
 
-        /* Transições de saída */
         .slide.prev {
             transform: translateZ(-100px) scale(0.95);
             opacity: 0;
             visibility: hidden;
         }
 
-        /* Cabeçalho do Slide */
         .slide-header {
             display: flex;
             justify-content: space-between;
@@ -172,7 +171,6 @@
             font-weight: 800;
         }
 
-        /* Corpo do Slide */
         .slide-body {
             flex-grow: 1;
             display: flex;
@@ -200,7 +198,6 @@
             max-width: 850px;
         }
 
-        /* Rodapé do Slide */
         .slide-footer {
             display: flex;
             justify-content: space-between;
@@ -212,7 +209,6 @@
             opacity: 0.8;
         }
 
-        /* Layouts de conteúdo */
         .slide-grid-2 {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
@@ -243,7 +239,7 @@
             background-color: rgba(255, 255, 255, 0.04);
             transform: translateY(-5px);
             border-color: var(--secondary-color);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .slide-card h4 {
@@ -272,7 +268,6 @@
             border: 1px solid rgba(255, 255, 255, 0.04);
         }
 
-        /* Slide de Título (Capa) */
         .slide-title-page {
             text-align: center;
             align-items: center;
@@ -316,7 +311,6 @@
             margin: 0 auto;
         }
 
-        /* Controles de Navegação */
         .controls {
             display: flex;
             justify-content: space-between;
@@ -372,7 +366,6 @@
             transform: scale(1.3);
         }
 
-        /* Barra de Progresso */
         .progress-container {
             width: 100%;
             height: 4px;
@@ -391,7 +384,6 @@
             transition: width 0.4s ease;
         }
 
-        /* Listas personalizadas */
         ul.slide-list {
             list-style: none;
             margin-top: 15px;
@@ -413,7 +405,6 @@
             font-weight: 800;
         }
 
-        /* Badges de Tecnologias */
         .tech-badges {
             display: flex;
             flex-wrap: wrap;
@@ -467,7 +458,6 @@
             border-color: var(--primary-color);
         }
 
-        /* Terminal styling */
         .terminal-window {
             background-color: #090C0E;
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -491,9 +481,18 @@
             height: 8px;
             border-radius: 50%;
         }
-        .dot-red { background-color: #FF5F56; }
-        .dot-yellow { background-color: #FFBD2E; }
-        .dot-green { background-color: #27C93F; }
+
+        .dot-red {
+            background-color: #FF5F56;
+        }
+
+        .dot-yellow {
+            background-color: #FFBD2E;
+        }
+
+        .dot-green {
+            background-color: #27C93F;
+        }
 
         .terminal-title {
             margin-left: auto;
@@ -507,18 +506,19 @@
             padding: 16px 20px;
         }
 
-        /* Responsividade para telas menores e celulares */
         @media (max-width: 768px) {
             body {
                 overflow-y: auto;
                 height: auto;
                 padding: 40px 10px;
             }
+
             .presentation-container {
                 width: 95vw;
                 height: auto;
                 min-height: 80vh;
             }
+
             .slide {
                 position: relative;
                 height: auto;
@@ -527,27 +527,35 @@
                 display: none;
                 margin-bottom: 0;
             }
+
             .slide.active {
                 opacity: 1;
                 display: flex;
             }
+
             .slide h2 {
                 font-size: 1.8rem;
             }
+
             .slide p {
                 font-size: 0.95rem;
             }
-            .slide-grid-2, .slide-grid-3 {
+
+            .slide-grid-2,
+            .slide-grid-3 {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+
             .slide-card {
                 padding: 16px;
             }
+
             .controls {
                 width: 95vw;
                 margin-top: 15px;
             }
+
             .nav-home-btn {
                 position: fixed;
                 top: 10px;
@@ -558,45 +566,48 @@
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Glowing Blobs Background -->
     <div class="glowing-bg">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
     </div>
 
-    <!-- Atualizado o link de retorno para "../index.html" -->
-    <a href="../index.html" class="nav-home-btn">← Voltar ao Site</a>
+    <a href="index.html" class="nav-home-btn">← Voltar ao Site</a>
 
     <div class="presentation-container">
-        
-        <!-- Slide 1: Capa -->
+
         <div class="slide slide-title-page active">
             <div class="logo-container">
                 <svg width="55" height="55" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)"/>
-                    <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)"/>
-                    <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2"/>
+                    <path
+                        d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
+                        fill="var(--primary-color)" />
+                    <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                    <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2" />
                 </svg>
                 <div class="logo-text" style="font-size: 1.5rem;">N.E.E.E. <span>Emmanuel</span></div>
             </div>
             <h1>Apresentação do <span>Projeto</span></h1>
             <h3>Portal de Serviços Integrados</h3>
-            <p>Conheça as tecnologias utilizadas, a lógica por trás da aplicação e a forma como o sistema foi desenhado para modernizar as atividades do Centro.</p>
+            <p>Conheça as tecnologias utilizadas, a lógica por trás da aplicação e a forma como o sistema foi desenhado
+                para modernizar as atividades do Centro.</p>
             <div class="progress-container">
                 <div class="progress-bar"></div>
             </div>
         </div>
 
-        <!-- Slide 2: Proposta -->
         <div class="slide">
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)"/>
-                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)"/>
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path
+                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
+                            fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
+                            stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
@@ -606,11 +617,16 @@
                 <div class="slide-grid-2">
                     <div>
                         <h2>A Proposta do <span>Projeto</span></h2>
-                        <p>O Núcleo de Estudos Espírita Emmanuel atua desde 1969 prestando auxílio e amparo. Este projeto propõe a <strong>modernização e facilitação</strong> do acesso da comunidade aos serviços do centro.</p>
+                        <p>O Núcleo de Estudos Espírita Emmanuel atua desde 1969 prestando auxílio e amparo. Este
+                            projeto propõe a <strong>modernização e facilitação</strong> do acesso da comunidade aos
+                            serviços do centro.</p>
                         <ul class="slide-list">
-                            <li><strong>Site Institucional:</strong> Divulgação histórica, palestras públicas e ações sociais presenciais.</li>
-                            <li><strong>Portal Interativo:</strong> Gestão e simulação de serviços em formato digital, eliminando processos lentos em papel.</li>
-                            <li><strong>Inclusão e Comunidade:</strong> Conexão mais ágil para voluntários, leitores e participantes do bazar de caridade.</li>
+                            <li><strong>Site Institucional:</strong> Divulgação histórica, palestras públicas e ações
+                                sociais presenciais.</li>
+                            <li><strong>Portal Interativo:</strong> Gestão e simulação de serviços em formato digital,
+                                eliminando processos lentos em papel.</li>
+                            <li><strong>Inclusão e Comunidade:</strong> Conexão mais ágil para voluntários, leitores e
+                                participantes do bazar de caridade.</li>
                         </ul>
                     </div>
                     <div style="text-align: center; font-size: 8rem; opacity: 0.12; user-select: none;">🎯</div>
@@ -625,14 +641,16 @@
             </div>
         </div>
 
-        <!-- Slide 3: Tecnologias -->
         <div class="slide">
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)"/>
-                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)"/>
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path
+                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
+                            fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
+                            stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
@@ -640,13 +658,15 @@
             </div>
             <div class="slide-body">
                 <h2>Stack Tecnológica <span>Utilizada</span></h2>
-                <p style="margin-bottom: 15px;">O ecossistema do site foi projetado para rodar inteiramente no lado do cliente (Client-Side), garantindo alta velocidade e custo zero de infraestrutura de servidor.</p>
+                <p style="margin-bottom: 15px;">O ecossistema do site foi projetado para rodar inteiramente no lado do
+                    cliente (Client-Side), garantindo alta velocidade e custo zero de infraestrutura de servidor.</p>
                 <div class="slide-grid-3">
                     <div class="slide-card">
                         <div>
                             <div class="card-icon">📁</div>
                             <h4>HTML5 Semântico</h4>
-                            <p>Utilização correta da hierarquia de cabeçalhos e tags semânticas para melhor indexação de SEO e leitura de tela.</p>
+                            <p>Utilização correta da hierarquia de cabeçalhos e tags semânticas para melhor indexação de
+                                SEO e leitura de tela.</p>
                         </div>
                         <div class="tech-badges"><span class="tech-badge">Acessibilidade</span></div>
                     </div>
@@ -654,17 +674,21 @@
                         <div>
                             <div class="card-icon">🎨</div>
                             <h4>CSS3 Moderno</h4>
-                            <p>Variáveis CSS para temas, Grid e Flexbox para responsividade, efeitos de Glassmorphism e estilização `@media print` para o cupom do bazar.</p>
+                            <p>Variáveis CSS para temas, Grid e Flexbox para responsividade, efeitos de Glassmorphism e
+                                estilização `@media print` para o cupom do bazar.</p>
                         </div>
-                        <div class="tech-badges"><span class="tech-badge">CSS Grid</span><span class="tech-badge">Print Layout</span></div>
+                        <div class="tech-badges"><span class="tech-badge">CSS Grid</span><span class="tech-badge">Print
+                                Layout</span></div>
                     </div>
                     <div class="slide-card">
                         <div>
                             <div class="card-icon">⚡</div>
                             <h4>Vanilla JS & Storage</h4>
-                            <p>JavaScript puro sem frameworks adicionais. Controle de estado complexo persistido localmente via Web Storage API (localStorage).</p>
+                            <p>JavaScript puro sem frameworks adicionais. Controle de estado complexo persistido
+                                localmente via Web Storage API (localStorage).</p>
                         </div>
-                        <div class="tech-badges"><span class="tech-badge">ES6+ JavaScript</span><span class="tech-badge">localStorage</span></div>
+                        <div class="tech-badges"><span class="tech-badge">ES6+ JavaScript</span><span
+                                class="tech-badge">localStorage</span></div>
                     </div>
                 </div>
             </div>
@@ -677,14 +701,16 @@
             </div>
         </div>
 
-        <!-- Slide 4: O que o JS faz -->
         <div class="slide">
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)"/>
-                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)"/>
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path
+                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
+                            fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
+                            stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
@@ -692,27 +718,31 @@
             </div>
             <div class="slide-body">
                 <h2>O que o <span>JavaScript</span> faz?</h2>
-                <p style="margin-bottom: 15px;">A lógica de controle programada no arquivo <code>portal.js</code> gerencia toda a interatividade de forma dinâmica:</p>
+                <p style="margin-bottom: 15px;">A lógica de controle programada no arquivo <code>portal.js</code>
+                    gerencia toda a interatividade de forma dinâmica:</p>
                 <div class="slide-grid-3">
                     <div class="slide-card">
                         <div>
                             <div class="card-icon">🛍️</div>
                             <h4>Bazar Interativo</h4>
-                            <p>Filtros, carrinho de compras com controle reativo de estoque físico, soma de valores com cálculo de desconto social e emissão de comprovante fiscal.</p>
+                            <p>Filtros, carrinho de compras com controle reativo de estoque físico, soma de valores com
+                                cálculo de desconto social e emissão de comprovante fiscal.</p>
                         </div>
                     </div>
                     <div class="slide-card">
                         <div>
                             <div class="card-icon">📚</div>
                             <h4>Reserva de Acervo</h4>
-                            <p>Tabela de livros com busca em tempo real, fluxo de reserva via janela modal e sincronização com indicadores do dashboard.</p>
+                            <p>Tabela de livros com busca em tempo real, fluxo de reserva via janela modal e
+                                sincronização com indicadores do dashboard.</p>
                         </div>
                     </div>
                     <div class="slide-card">
                         <div>
                             <div class="card-icon">🗓️</div>
                             <h4>Validações & Listas</h4>
-                            <p>Controle de agendamentos de Acolhimento Fraterno bloqueando dias inválidos (fora de terças-feiras e passados) e escala flexível de voluntariado.</p>
+                            <p>Controle de agendamentos de Acolhimento Fraterno bloqueando dias inválidos (fora de
+                                terças-feiras e passados) e escala flexível de voluntariado.</p>
                         </div>
                     </div>
                 </div>
@@ -726,14 +756,16 @@
             </div>
         </div>
 
-        <!-- Slide 5: Como foi Feito -->
         <div class="slide">
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)"/>
-                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)"/>
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path
+                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
+                            fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
+                            stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
@@ -743,11 +775,16 @@
                 <div class="slide-grid-2">
                     <div>
                         <h2>Como foi Feito? <span>Arquitetura</span></h2>
-                        <p>O desenvolvimento focou em proporcionar uma interface leve, segura e esteticamente premium, dividida em módulos claros:</p>
+                        <p>O desenvolvimento focou em proporcionar uma interface leve, segura e esteticamente premium,
+                            dividida em módulos claros:</p>
                         <ul class="slide-list">
-                            <li><strong>Separação de Preocupações:</strong> HTML estrutural, folha de estilos limpa e modular de layout, e JavaScript isolado em escopo fechado (IIFE).</li>
-                            <li><strong>Identidade Coesa:</strong> Paleta HSL focando em harmonia (azul sereno para paz espiritual e dourado para acolhimento) com fontes refinadas (Lora + Inter).</li>
-                            <li><strong>Persistência Sem Backend:</strong> Simulação completa de banco de dados por chave-valor do localStorage, permitindo demonstrações idênticas a um ambiente real de produção.</li>
+                            <li><strong>Separação de Preocupações:</strong> HTML estrutural, folha de estilos limpa e
+                                modular de layout, e JavaScript isolado em escopo fechado (IIFE).</li>
+                            <li><strong>Identidade Coesa:</strong> Paleta HSL focando em harmonia (azul sereno para paz
+                                espiritual e dourado para acolhimento) com fontes refinadas (Lora + Inter).</li>
+                            <li><strong>Persistência Sem Backend:</strong> Simulação completa de banco de dados por
+                                chave-valor do localStorage, permitindo demonstrações idênticas a um ambiente real de
+                                produção.</li>
                         </ul>
                     </div>
                     <div class="terminal-window">
@@ -758,14 +795,14 @@
                             <span class="terminal-title">estrutura-projeto</span>
                         </div>
                         <div class="terminal-body">
-                            <code style="display: block; font-family: monospace; font-size: 0.85rem; line-height: 1.6; color: var(--text-gray);">
+                            <code
+                                style="display: block; font-family: monospace; font-size: 0.85rem; line-height: 1.6; color: var(--text-gray);">
 ├── index.html (Site Principal)<br>
 ├── style.css (Estilos Globais)<br>
 ├── portal.html (Portal de Painéis)<br>
 ├── portal.css (Layout do Painel)<br>
 ├── portal.js (Lógica & Estados)<br>
-└── apresentacao/<br>
-&nbsp;&nbsp;&nbsp;&nbsp;└── slides.html (Apresentação)
+└── images/ (Banco de Imagens)
                             </code>
                         </div>
                     </div>
@@ -780,14 +817,16 @@
             </div>
         </div>
 
-        <!-- Slide 6: Conclusão -->
         <div class="slide">
             <div class="slide-header">
                 <div class="slide-logo">
                     <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z" fill="var(--primary-color)"/>
-                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)"/>
-                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path
+                            d="M12 0C12 0 7 5.37258 7 12C7 15.3137 9.68629 18 13 18C16.3137 18 19 15.3137 19 12C19 5.37258 12 0 12 0Z"
+                            fill="var(--primary-color)" />
+                        <rect x="10" y="19" width="6" height="11" fill="var(--primary-color)" />
+                        <path d="M3 25C3 25 3 30 13 30C23 30 23 25 23 25" stroke="var(--primary-color)"
+                            stroke-width="2" />
                     </svg>
                     <span class="logo-text">PORTAL <span>Emmanuel</span></span>
                 </div>
@@ -795,7 +834,8 @@
             </div>
             <div class="slide-body" style="text-align: center; align-items: center;">
                 <h2>Principais <span>Benefícios</span> do Modelo</h2>
-                <p style="margin: 0 auto 25px auto; max-width: 750px;">O desenvolvimento alcançou uma plataforma estática de alta fidelidade e utilidade imediata.</p>
+                <p style="margin: 0 auto 25px auto; max-width: 750px;">O desenvolvimento alcançou uma plataforma
+                    estática de alta fidelidade e utilidade imediata.</p>
                 <div class="slide-grid-3" style="width: 100%;">
                     <div class="slide-card" style="text-align: center; align-items: center;">
                         <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 5px;">🚀</div>
@@ -814,7 +854,7 @@
                     </div>
                 </div>
                 <h4 style="margin-top: 25px; font-size: 1.2rem; color: #FFFFFF; font-family: var(--font-title);">
-                    Obrigado! A paz esteja com todos.
+                    Obrigado!
                 </h4>
             </div>
             <div class="slide-footer">
@@ -828,19 +868,20 @@
 
     </div>
 
-    <!-- Controles de Rodapé -->
     <div class="controls">
         <button class="btn-nav" id="btn-prev" disabled aria-label="Slide anterior">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
         </button>
         <div class="pagination" id="pagination-dots">
-            <!-- Gerado via JavaScript -->
+
         </div>
         <button class="btn-nav" id="btn-next" aria-label="Próximo slide">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
@@ -855,11 +896,10 @@
             const btnPrev = document.getElementById('btn-prev');
             const btnNext = document.getElementById('btn-next');
             const dotsContainer = document.getElementById('pagination-dots');
-            
+
             let currentSlide = 0;
             const totalSlides = slides.length;
 
-            // Criar dots da paginação
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('div');
                 dot.className = `dot ${i === 0 ? 'active' : ''}`;
@@ -879,7 +919,6 @@
                     }
                 });
 
-                // Atualizar dots
                 dots.forEach((dot, index) => {
                     if (index === currentSlide) {
                         dot.classList.add('active');
@@ -888,14 +927,12 @@
                     }
                 });
 
-                // Atualizar barras de progresso
                 const activeProgressBar = slides[currentSlide].querySelector('.progress-bar');
                 if (activeProgressBar) {
                     const percentage = ((currentSlide + 1) / totalSlides) * 100;
                     activeProgressBar.style.width = `${percentage}%`;
                 }
 
-                // Habilitar/Desabilitar botões
                 btnPrev.disabled = currentSlide === 0;
                 btnNext.disabled = currentSlide === totalSlides - 1;
             }
@@ -921,11 +958,9 @@
                 }
             }
 
-            // Eventos dos botões
             btnPrev.addEventListener('click', prevSlide);
             btnNext.addEventListener('click', nextSlide);
 
-            // Teclado
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowRight' || e.key === ' ') {
                     e.preventDefault();
@@ -936,18 +971,9 @@
                 }
             });
 
-            // Inicializar barras de progresso
             updateSlideState();
-
-            // Verificar se o arquivo está rodando avulso (fora da estrutura do projeto)
-            // Se sim, oculta o botão de "Voltar ao Site"
-            const probeImg = new Image();
-            probeImg.onerror = () => {
-                const backBtn = document.querySelector('.nav-home-btn');
-                if (backBtn) backBtn.style.display = 'none';
-            };
-            probeImg.src = "../images/logo.jpeg";
         });
     </script>
 </body>
+
 </html>
